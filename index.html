@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THtaovathaotacvoimang</title>
+</head>
+<body>
+<input id="nhapvao">
+<button onclick="add()">Add</button>
+<button onclick="display()">Display</button>
+<div id="ad"></div>
+<script>
+    let array=[];
+    let x=0;
+    function add(){
+        array[x]=document.getElementById("nhapvao").value;
+        x++;
+        document.getElementById("nhapvao").value="";
+    }
+    function display(){
+        let a="<hr>";
+        for (let i=0;i<array.length;i++){
+            a+="Element"+" "+i+"="+ " " +array[i]+"<br>";
+        }document.getElementById("ad").innerHTML=a;
+    }
+</script>
+</body>
+</html>
